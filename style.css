@@ -1,0 +1,12 @@
+/*
+Theme Name: Temple ACM
+Thme URI: https://github.com/zachgoncalves/temple-acm
+Author: Zachary Goncalves
+Description: Wordpress theme for the Temple University Student Chapter of the Association for Computing Machinery. 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+.site-header {
+    background:#333;
+}
