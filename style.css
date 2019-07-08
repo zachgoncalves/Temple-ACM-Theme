@@ -7,6 +7,82 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+
+h1, h2, h3, h4, h5, h6, a {
+    font-family: 'Poppins', sans-serif;
+}
+
 .site-header {
     background:#333;
+}
+/*
+* Navigation
+*/
+.navbar-toggler {
+    font-size: 1.4rem;
+    padding: .75rem;
+    border: none;
+    color: #FFF !important;
+}
+.brand-uni {
+    display: block;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.nav-content {
+    display: flex;
+    flex-flow: row wrap;
+    transition: 150ms ease-in-out;
+}
+
+.nav-logo {
+    transition: 150ms ease-in-out;
+    max-width: 50px;
+    height: auto;
+}
+
+.nav-title {
+    padding-left: .5rem;
+    font-size: .8rem;
+    padding-top: .25rem;
+}
+/*
+* Header Events 
+*/
+.head-events {
+    background:#333;
+}
+.head-events-list-container {
+    background:#8E2727;
+    margin-top:5rem;
+}
+.head-events-list {
+    max-width:600px;
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+.head-events-list li {
+    padding:1em 0 1em 0;
+}
+.head-events-list li:not(:last-child) {
+    border-bottom:1px solid rgba(255,255,255,.5);
+}
+.head-events-list li span { 
+    color:#FFF;
+    display:block;
+}         
+.event-title {
+    font-weight: bolder;
+    font-size:1.2em;
+    margin-bottom:.25em;
+}              
+.event-time {
+    margin-bottom:.25em;
+}
+.action-link {
+
 }

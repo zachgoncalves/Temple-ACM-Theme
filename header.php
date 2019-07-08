@@ -25,11 +25,11 @@
  
     <header class="site-header">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-lg navbar-dark">
                 <a class="navbar-brand" href="#">
                     <div class="nav-content">
                         <div class="nav-logo">
-                            <img src="assets/img/acm_logo.png" class="nav-logo " alt="ACM logo">
+                            <img src="<?php bloginfo('template_directory'); ?>/assets/img/acm_logo.png" class="nav-logo " alt="ACM logo">
                         </div>
                         <div class="nav-title">
                             Association for Computing Machinery
@@ -59,16 +59,25 @@
                 </div>
             </nav>
         </div>
-        <div class="head-events">
-            <div class="head-events-list-container">
-                <ul class="head-events-list">
-                    <li>
-                        <span class="event-title">ACM Presents Lockheed Martin</span>
-                        <span class="event-date">September 25, 2019</span>
-                        <span class="event-time">5PM-6PM SERC 356</span>
-                        <a href="#" class="action-link">Learn More ></a>
-                    </li>
-                </ul>
+        <div class="container-fluid no-gutters head-events">
+            <div class="row justify-content-end">
+                <div class="col-md-6 head-events-list-container">
+                    <span>Upcoming Events</span>
+                    <ul class="head-events-list">
+                        <li>
+                            <span class="event-title">ACM Presents Lockheed Martin</span>
+                            <span class="event-date">September 25, 2019</span>
+                            <span class="event-time">5PM-6PM SERC 356</span>
+                            <a href="#" class="action-link">Learn More ></a>
+                        </li>
+                        <li>
+                            <span class="event-title">ACM Presents Lockheed Martin</span>
+                            <span class="event-date">September 25, 2019</span>
+                            <span class="event-time">5PM-6PM SERC 356</span>
+                            <a href="#" class="action-link">Learn More ></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
