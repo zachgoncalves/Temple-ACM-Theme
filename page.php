@@ -6,7 +6,9 @@
 
 	get_header(); 
 ?>
-		
+	<div class="page-titlebar">
+		<h1 class="page-title"><?php the_title() ?></h1>	
+	</div>
 	<?php
 
 	if(have_posts()):
@@ -15,13 +17,9 @@
 			
 			?>
 	
-		<div id="page_<?php the_ID(); ?>" <?php post_class() ?>>				
-			<div class="page__content">                	                    		                    
-				<h1 class="page__title"><?php the_title(); ?></h1>					                                                           
-				<?php the_content(); ?>					
-			</div><!-- / page__content -->                                
-		</div><!-- / page_<?php the_ID(); ?> -->
-		
+		    <div class="container">         		                    
+				<?php the_content(); ?>
+			</div>					
 		<?php
 					
 		endwhile;	

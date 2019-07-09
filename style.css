@@ -20,18 +20,14 @@ a {
 }
 
 .site-header {
-    background:#333;
-    background:  url('assets/img/tumorgan.jpg') no-repeat top center;
+    background:rgb(6, 105, 138);
+    /*background:  url('assets/img/tumorgan.jpg') no-repeat top center;*/
 }
 
 
 /*
 * Navigation
 */
-.navbar-acm-nav .nav-item .nav-link {
-    color:#FFF;
-    transition: 150ms ease-in-out;
-}
 .navbar-toggler {
     font-size: 1.4rem;
     padding: .75rem;
@@ -62,7 +58,19 @@ a {
     font-size: .9rem;
     padding-top: .25rem;
 }
-
+.menu-item {
+    display: inline-block;
+    list-style-type: none;
+    padding:.5rem;
+}
+.menu-item a {
+    color:#FFF;
+    text-decoration: none;
+    transition: 150ms ease-in-out;
+}
+.menu-item a:hover {
+    color:#CCC;
+}
 
 /*
 * Home Page 
@@ -73,17 +81,10 @@ a {
     margin-bottom:10em;
 }
 
-.header-events::after {
-    content: ' ';
-    background: #8E2727;
-    display: block;
-    height: 75px;
-    width: 50%;
-    float: right;
-}
-
 .header-events-list-container {
-    background: rgba(142,39,39,1);
+    /*background: rgba(142,39,39,1);*/
+    background:#3D86A1;
+    border-top: 5px solid rgba(221,156,1,1);
     margin-top: 1rem;
 }
 
@@ -130,7 +131,11 @@ a {
 .event-time {
     margin-bottom: .25em;
 }
-
+.event-image-preview {
+    max-width:150px;
+    float: left;
+    margin-right:1rem;
+}
 .homepage-title h1 {
     margin-top:2em;
     font-size:3em;
@@ -155,15 +160,28 @@ a {
 
 .section-title {
     font-weight: bold;
-    text-align: center;
 }
 .main-highlight {
     padding:5rem 1rem;
-    background: #8E2727;
+    background:rgba(6, 105, 138, 1);
+    /*background: #8E2727;*/
     color:#FFF;
 }
 .highlights {
 
+}
+.page-titlebar {
+    background:rgba(1, 130, 172, 1);
+    /*background: #8E2727;*/
+    padding:3rem 1rem;
+    text-align: center;
+}
+.page-title {
+    color:#FFF;
+    font-weight: bolder;
+    font-size: 3em;
+    margin:0;
+    padding:0;
 }
 
 @media (min-width: 576px) { 
@@ -186,18 +204,33 @@ a {
     .homepage-title-white {
         color:#FFF;
     }      
+    .header-events::after {
+        content: ' ';
+        background:#3D86A1;
+        /*background: #8E2727;*/
+        display: block;
+        height: 75px;
+        width: 50%;
+        float: right;
+    }
 }
 
 @media (min-width: 992px) { 
     .homepage-title {
         margin-top:-5.25em;
+        margin-left:30%;
     }
     .homepage-title h1 {
         font-size:4em;
-        color:#000;
+        color:rgb(6, 105, 138);
     }  
 }
 
 @media (min-width: 1200px) {
 
+}
+@media (min-width: 1920px) {
+    .homepage-title {
+        margin-left:55%;
+    }
 }
