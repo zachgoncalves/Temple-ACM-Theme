@@ -5,7 +5,7 @@
  */
 ?>
 
-	</section>
+	</main>
         
 	<footer>  
 					

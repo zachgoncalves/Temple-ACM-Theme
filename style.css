@@ -9,29 +9,42 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
-
-h1, h2, h3, h4, h5, h6, a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
     font-family: 'Poppins', sans-serif;
 }
 
 .site-header {
     background:#333;
+    background:  url('assets/img/tumorgan.jpg') no-repeat top center;
 }
+
+
 /*
 * Navigation
 */
+.navbar-acm-nav .nav-item .nav-link {
+    color:#FFF;
+    transition: 150ms ease-in-out;
+}
 .navbar-toggler {
     font-size: 1.4rem;
     padding: .75rem;
     border: none;
     color: #FFF !important;
 }
+
 .brand-uni {
     display: block;
-    font-size: .7rem;
-    text-transform: uppercase;
+    font-size: .8rem;
     letter-spacing: 1px;
 }
+
 .nav-content {
     display: flex;
     flex-flow: row wrap;
@@ -46,43 +59,145 @@ h1, h2, h3, h4, h5, h6, a {
 
 .nav-title {
     padding-left: .5rem;
-    font-size: .8rem;
+    font-size: .9rem;
     padding-top: .25rem;
 }
+
+
 /*
-* Header Events 
+* Home Page 
 */
-.head-events {
-    background:#333;
+
+.header-events {
+    background: url('assets/img/plus_bg.png');
+    margin-bottom:10em;
 }
-.head-events-list-container {
-    background:#8E2727;
-    margin-top:5rem;
+
+.header-events::after {
+    content: ' ';
+    background: #8E2727;
+    display: block;
+    height: 75px;
+    width: 50%;
+    float: right;
 }
-.head-events-list {
-    max-width:600px;
+
+.header-events-list-container {
+    background: rgba(142,39,39,1);
+    margin-top: 1rem;
+}
+
+.header-events-list-title {
+    color: #FFF;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block;
+    margin: 1rem 0 0 0;
+}
+
+.header-events-list {
+    max-width: 525px;
     list-style: none;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
-.head-events-list li {
-    padding:1em 0 1em 0;
+
+.header-events-list li {
+    padding: 1em 0 1em 0;
 }
-.head-events-list li:not(:last-child) {
-    border-bottom:1px solid rgba(255,255,255,.5);
+
+.header-events-list li:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
 }
-.head-events-list li span { 
-    color:#FFF;
-    display:block;
-}         
+
+.header-events-list li span {
+    color: #FFF;
+    display: block;
+}
+.event {
+    transition:150ms linear all;
+}
+.event:hover {
+    background:rgba(255,255,255,.05);
+    padding-left:.5em;
+}
 .event-title {
     font-weight: bolder;
-    font-size:1.2em;
-    margin-bottom:.25em;
-}              
+    font-size: 1em;
+    margin-bottom: .25em;
+}
+
 .event-time {
-    margin-bottom:.25em;
+    margin-bottom: .25em;
+}
+
+.homepage-title h1 {
+    margin-top:2em;
+    font-size:3em;
+    text-align: center;
+    font-weight: bolder;
+    color:#FFF;
+}
+.container-small {
+    max-width:750px;
+    margin:0 auto;
 }
 .action-link {
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: 1px;
+    color:#FFF;
+}
+
+.action-link-black {
+    color:#000;
+}
+
+.section-title {
+    font-weight: bold;
+    text-align: center;
+}
+.main-highlight {
+    padding:5rem 1rem;
+    background: #8E2727;
+    color:#FFF;
+}
+.highlights {
+
+}
+
+@media (min-width: 576px) { 
+
+}
+
+@media (min-width: 768px) {
+    .homepage-title {
+        max-width:300px;
+        margin-left:20%;
+        position: absolute;
+        margin-top:-4.00em;
+    }
+    .homepage-title h1 {
+        margin-top:0;
+        font-size:3em;
+        text-align: left;
+        color:#000;
+    }  
+    .homepage-title-white {
+        color:#FFF;
+    }      
+}
+
+@media (min-width: 992px) { 
+    .homepage-title {
+        margin-top:-5.25em;
+    }
+    .homepage-title h1 {
+        font-size:4em;
+        color:#000;
+    }  
+}
+
+@media (min-width: 1200px) {
 
 }
