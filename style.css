@@ -132,8 +132,6 @@ a {
 }
 .event-image-preview {
     max-width:150px;
-    float: left;
-    margin-right:1rem;
 }
 .event-details {
     background:#F1F1F1;
