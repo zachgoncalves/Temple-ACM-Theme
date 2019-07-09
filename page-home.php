@@ -28,13 +28,13 @@
 								<?php $loop = new WP_Query($args); ?>
 								<?php if ( $loop->have_posts() ) : while ( $loop->have_posts()) : $loop->the_post(); ?>
 
-								<li class="event">
-									<img class="event-image-preview" src="<?php the_field('preview_image') ?>" />
-									<span class="event-title"><?php the_title() ?></span>
-									<span class="event-date"><?php the_field('event_date') ?> in <?php the_field('event_location') ?></span>
-									<span class="event-time"><?php the_field('event_start_time') ?> - <?php the_field('event_end_time') ?></span>
-									<a href="<?php echo get_permalink(get_the_ID()) ?>" class="action-link">Learn More ></a>
-								</li>
+									<li class="event">
+										<img class="event-image-preview" src="<?php the_field('preview_image') ?>" />
+										<span class="event-title"><?php the_title() ?></span>
+										<span class="event-date"><?php the_field('event_date') ?> in <?php the_field('event_location') ?></span>
+										<span class="event-time"><?php the_field('event_start_time') ?> - <?php the_field('event_end_time') ?></span>
+										<a href="<?php echo get_permalink(get_the_ID()) ?>" class="action-link">Learn More ></a>
+									</li>
 
 								<?php endwhile; ?>
 
