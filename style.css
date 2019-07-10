@@ -20,7 +20,9 @@ a {
 }
 
 .site-header {
-    background: #FFF; 
+    background: #2193b0;  /* fallback for old browsers */
+    background:linear-gradient(to right, rgba(109, 213, 237,.55), rgba(33, 147, 176, .55)), url('assets/img/tumorgan.jpg') center;
+    background-size: cover;
 }
 
 /*
@@ -76,9 +78,8 @@ a {
 */
 
 .header-events {
-    background: url('assets/img/plus_bg.png');
+    /*background: url('assets/img/plus_bg.png');*/
     margin-bottom:10em;
-    height:85vh;
 }
 
 .header-events-list-container {
@@ -87,28 +88,30 @@ a {
 }
 
 .header-events-list-title {
-    color: #000;
+    color: #FFF;
     font-size: 1.2em;
     display: block;
     text-align: center;
     margin: 1rem 0 1rem 0;
+    font-weight: bold;
 }
 
 .event {
     transition:150ms linear all;
-    border-top: 2px solid rgba(0,0,0,1);
-    border-left: 2px solid rgba(0,0,0,1);
+    border-top: 2px solid #255;
+    border-left: 2px solid #255;
     padding:1em;
-    box-shadow:8px 8px 0 #000;
+    box-shadow:8px 8px 0 #255;
     height: 100%;
     color:#000;
+    background:rgba(255,255,255,.6);
 }
 .event:hover {
-    background:#000;
-    color:#FFF;
+    background:#FFF;
+    color:#000;
 }
 .event:active {
-    box-shadow: 3px 3px 0 #000;
+    box-shadow: 3px 3px 0 #255;
     top: 3px;
 }
 .event-title, .event-time, .event-date {
@@ -135,11 +138,11 @@ a {
     margin-right:1em;
 }
 .homepage-title h1 {
-    margin-top:2em;
+    margin-top:3em;
     font-size:3em;
     text-align: center;
     font-weight: bolder;
-    color:#000;
+    color:#FFF;
 }
 .container-small {
     max-width:750px;
@@ -158,10 +161,14 @@ a {
 .section-title {
     font-weight: bold;
 }
+.mission-highlight {
+    margin-bottom:8rem;
+}
 .main-highlight {
     padding:5rem 1rem;
-    background:#000;
-    color:#FFF;
+    margin-bottom: 5rem;
+    background:linear-gradient(to left, rgba(109, 213, 237, 1), rgba(33, 147, 176, 1));
+        color:#FFF;
 }
 .highlights {
 
@@ -274,7 +281,7 @@ a {
     .homepage-title {
         margin-bottom:15%;
         text-align:center;
-        padding-top:7em;
+        padding-top:10em;
     }
     .homepage-title h1 {
         margin-top:0;

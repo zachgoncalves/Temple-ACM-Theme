@@ -54,7 +54,7 @@
 		<div id="page_<?php the_ID(); ?>" <?php post_class() ?>>				
 			<div class="page__content">                	                    		                    
 				<section>
-					<div class="container mb-5">
+					<div class="container mission-highlight">
 						<div class="row align-items-center">
 							<div class="col-md-4 ">
 								<h2 class="section-title"><?php the_field('intro_title') ?></h2>
@@ -66,7 +66,7 @@
 					</div>
 				</section>
 				
-				<section class="main-highlight mb-5">
+				<section class="main-highlight">
 					<div class="container">
 						<div class="row align-items-center">
 							<div class="col-md-4 ">
