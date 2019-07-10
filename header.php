@@ -23,13 +23,13 @@
 
 <body <?php body_class(); ?>>
  
-    <header class="site-header">
+    <header>
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <a class="navbar-brand" href="/">
                     <div class="nav-content">
                         <div class="nav-logo">
-                            <img src="<?php bloginfo('template_directory'); ?>/assets/img/acm_logo.png" class="nav-logo " alt="ACM logo">
+                            <img src="<?php bloginfo('template_directory'); ?>/assets/img/acm_logo_black.png" class="nav-logo " alt="ACM logo">
                         </div>
                         <div class="nav-title">
                             Association for Computing Machinery

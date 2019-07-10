@@ -20,10 +20,8 @@ a {
 }
 
 .site-header {
-    background:rgb(6, 105, 138);
-    /*background:  url('assets/img/tumorgan.jpg') no-repeat top center;*/
+    background: #FFF; 
 }
-
 
 /*
 * Navigation
@@ -32,19 +30,20 @@ a {
     font-size: 1.4rem;
     padding: .75rem;
     border: none;
-    color: #FFF !important;
+    color: #000 !important;
 }
 
 .brand-uni {
     display: block;
     font-size: .8rem;
-    letter-spacing: 1px;
+    color:#000;
 }
 
 .nav-content {
     display: flex;
     flex-flow: row wrap;
     transition: 150ms ease-in-out;
+    color:#000;
 }
 
 .nav-logo {
@@ -64,12 +63,12 @@ a {
     padding:.5rem;
 }
 .menu-item a {
-    color:#FFF;
+    color:#000;
     text-decoration: none;
     transition: 150ms ease-in-out;
 }
 .menu-item a:hover {
-    color:#CCC;
+    color:#AAA;
 }
 
 /*
@@ -79,48 +78,41 @@ a {
 .header-events {
     background: url('assets/img/plus_bg.png');
     margin-bottom:10em;
+    height:85vh;
 }
 
 .header-events-list-container {
     /*background: rgba(142,39,39,1);*/
-    background:#3D86A1;
-    border-top: 5px solid rgba(221,156,1,1);
     margin-top: 1rem;
 }
 
 .header-events-list-title {
-    color: #FFF;
+    color: #000;
     font-size: 1.2em;
-    font-weight: bold;
     display: block;
-    margin: 1rem 0 0 0;
+    text-align: center;
+    margin: 1rem 0 1rem 0;
 }
 
-.header-events-list {
-    max-width: 525px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.header-events-list li {
-    padding: 1em 0 1em 0;
-}
-
-.header-events-list li:not(:last-child) {
-    border-bottom: 1px solid rgba(255, 255, 255, .5);
-}
-
-.header-events-list li span {
-    color: #FFF;
-    display: block;
-}
 .event {
     transition:150ms linear all;
+    border-top: 2px solid rgba(0,0,0,1);
+    border-left: 2px solid rgba(0,0,0,1);
+    padding:1em;
+    box-shadow:8px 8px 0 #000;
+    height: 100%;
+    color:#000;
 }
 .event:hover {
-    background:rgba(255,255,255,.05);
-    padding-left:.5em;
+    background:#000;
+    color:#FFF;
+}
+.event:active {
+    box-shadow: 3px 3px 0 #000;
+    top: 3px;
+}
+.event-title, .event-time, .event-date {
+    display:block;
 }
 .event-title {
     font-weight: bolder;
@@ -147,7 +139,7 @@ a {
     font-size:3em;
     text-align: center;
     font-weight: bolder;
-    color:#FFF;
+    color:#000;
 }
 .container-small {
     max-width:750px;
@@ -157,10 +149,10 @@ a {
     text-transform: uppercase;
     font-size: .8rem;
     letter-spacing: 1px;
-    color:#FFF;
-}
-.action-link-black {
     color:#000;
+}
+.action-link-white {
+    color:#FFF;
 }
 
 .section-title {
@@ -168,26 +160,110 @@ a {
 }
 .main-highlight {
     padding:5rem 1rem;
-    background:rgba(6, 105, 138, 1);
-    /*background: #8E2727;*/
+    background:#000;
     color:#FFF;
 }
 .highlights {
 
 }
 .page-titlebar {
-    background:rgba(1, 130, 172, 1);
-    border-bottom: 5px solid rgba(221,156,1,1);
+    border-bottom: 5px solid rgba(0,0,0,1);
     /*background: #8E2727;*/
     padding:3rem 1rem;
     text-align: center;
 }
 .page-title {
-    color:#FFF;
+    color:#000;
     font-weight: bolder;
     font-size: 3em;
     margin:0;
     padding:0;
+}
+
+/*
+ * Footer
+ */
+ footer {
+    padding: 3rem 2rem;
+    margin-top:3em;
+}
+
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-links li {
+    padding: .2em 0;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #000;
+    font-size: .9rem;
+}
+
+.footer-links li a:hover {
+    color: #AAA;
+}
+
+.footer-links-horizontal li {
+    display: inline-block;
+}
+
+.footer-links-horizontal li a {
+    display: block;
+    padding: 0 .25rem;
+}
+
+.footer-links-horizontal li:first-child a {
+    padding-left: 0;
+}
+
+.footer-links-horizontal li:not(:last-child) a::after {
+    content: '|';
+    color: #000;
+    margin-left: 1rem;
+}
+
+.footer-title {
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-social-container {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-social {
+    font-size: .9rem;
+    margin-right: 2px;
+    color: #000;
+}
+
+.footer-social:hover {
+    color: #AAA;
+}
+
+.footer-text {
+    color: #000;
+    font-size: .8rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    padding-top: 2rem;
+}
+
+.footer-text p {
+    margin-bottom: .25rem;
+}
+
+.footer-logo {
+    max-width: 50px;
+    height: auto;
+    padding-bottom: 2rem;
 }
 
 @media (min-width: 576px) { 
@@ -196,39 +272,19 @@ a {
 
 @media (min-width: 768px) {
     .homepage-title {
-        max-width:300px;
-        margin-left:20%;
-        position: absolute;
-        margin-top:-4.00em;
+        margin-bottom:15%;
+        text-align:center;
+        padding-top:7em;
     }
     .homepage-title h1 {
         margin-top:0;
         font-size:3em;
-        text-align: left;
-        color:#000;
-    }  
-    .homepage-title-white {
-        color:#FFF;
-    }      
-    .header-events::after {
-        content: ' ';
-        background:#3D86A1;
-        /*background: #8E2727;*/
-        display: block;
-        height: 75px;
-        width: 50%;
-        float: right;
-    }
+    }        
 }
 
 @media (min-width: 992px) { 
-    .homepage-title {
-        margin-top:-5.25em;
-        margin-left:30%;
-    }
     .homepage-title h1 {
         font-size:4em;
-        color:rgb(6, 105, 138);
     }  
 }
 
@@ -236,7 +292,65 @@ a {
 
 }
 @media (min-width: 1920px) {
-    .homepage-title {
-        margin-left:55%;
-    }
+
 }
+
+
+
+
+
+
+.blinking-cursor {
+    font-weight: 100;
+    color: #2E3D48;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  }
+  
+  @keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-moz-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-webkit-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-ms-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-o-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }

@@ -25,7 +25,11 @@ function theme_styles(){
         array ( 'jquery' ), 
         4.3, 
         true
-    );    
+    );
+    wp_enqueue_script( 
+        'fontawesome-all', 
+        get_template_directory_uri() . '/assets/js/fontawesome-all.min.js'
+    );        
 }
 add_action('wp_enqueue_scripts', 'theme_styles');
 /********************************************************************************/
