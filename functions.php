@@ -77,6 +77,26 @@ function register_menu() {
 }
 add_action( 'init', 'register_menu' );
 
+function wpb_list_child_pages() { 
+
+    global $post; 
+
+    if ( is_page() && $post->post_parent )
+        $childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' );
+    else
+        $childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
+    if ( $childpages ) {
+        $string = '
+        <nav class="sidebar-nav">
+            <a href="'.get_permalink($post->post_parent).'">'.get_the_title($post->post_parent).'</a>'
+            .$childpages.
+        '
+        </nav>';
+    }
+    return $string;
+}
+add_shortcode('wpb_childpages', 'wpb_list_child_pages');
+
 /*--------------------------------------------------------------*/
 // Custom Post Types -> Events
 /*--------------------------------------------------------------*/

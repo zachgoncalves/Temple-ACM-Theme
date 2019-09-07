@@ -6,7 +6,7 @@
 
 	get_header(); 
 ?>
-	<div class="page-titlebar">
+	<div class="page-titlebar mb-5">
 		<h1 class="page-title"><?php the_title() ?></h1>	
 	</div>
 	<?php
@@ -17,8 +17,20 @@
 			
 			?>
 	
-		    <div class="container">         		                    
-				<?php the_content(); ?>
+		    <div class="container">  
+				<?php if(!empty(wpb_list_child_pages())): ?>
+				<div class="row">
+					<div class="col-md-3">
+						<?php echo wpb_list_child_pages(); ?>
+					</div>
+					<div class="col-md-9">
+						<?php the_content(); ?>
+					</div>
+				</div>
+				<?php else: 
+					the_content(); 
+				endif;
+				?>
 			</div>					
 		<?php
 					

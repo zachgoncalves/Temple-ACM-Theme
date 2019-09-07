@@ -22,10 +22,9 @@
 </head>
 
 <body <?php body_class(); ?>>
- 
     <header>
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark">
+            <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="/">
                     <div class="nav-content">
                         <div class="nav-logo">
