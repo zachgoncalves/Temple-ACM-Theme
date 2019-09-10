@@ -87,11 +87,12 @@ function wpb_list_child_pages() {
         $childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
     if ( $childpages ) {
         $string = '
-        <nav class="sidebar-nav">
-            <a href="'.get_permalink($post->post_parent).'">'.get_the_title($post->post_parent).'</a>'
+        <ul class="sidebar-nav">
+            <li><a href="'.get_permalink($post->post_parent).'">'.get_the_title($post->post_parent).'</a></li>'
             .$childpages.
         '
-        </nav>';
+        </ul>
+        ';
     }
     return $string;
 }

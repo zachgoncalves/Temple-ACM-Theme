@@ -51,7 +51,7 @@
 			<div class="row align-items-center">
 				<div class="col-md-8">
 					<div class="homepage-title">
-						<h1><span class="homepage-title-white">Developing People </span> <span class="blinking-cursor">|</span></h1>
+						<h1><span class="homepage-title-white">Developing People</span> <span class="blinking-cursor">|</span></h1>
 						<p>Temple University's ACM is the student professional organization for CIS Department majors.</p>
 					</div>
 				</div>
@@ -125,7 +125,7 @@
 							</div>
 							<div class="col-md-8">
 								<p class="lead"><?php the_field('call_to_action_text') ?></p>
-								<a href="<?php the_field('call_to_action_link') ?>" class="action-link-white">Learn More ></a>
+								<a href="<?php the_field('call_to_action_link') ?>" class="action-link action-link-white">Learn More <span class="action-link-icon"><i class="fas fa-arrow-right"></i></span></i></a>
 							</div>
 						</div>
 					</div>
@@ -135,24 +135,26 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-4">
-								<div class="highlight-box">
-									<h2 class="section-title">ACM-W</h2>
-									<p>ACM-W focuses on encouraging and supporting professional development for women in computing.</p>
-									<a href="#" class="action-link action-link-black">Learn More ></a>
-								</div>
+								<a href="https://tu-acmw.onrender.com/" class="highlight-cta">
+									<h2 class="highlight-title">ACM-W</h2>
+									<p>ACM-W is our sister organization that focuses on encouraging and supporting professional development for women in computing.</p>
+									<span class="btn btn-black btn-highlight">Learn More <i class="fas fa-arrow-right"></i></span>
+								</a>
 							</div>
 							<div class="col-md-4">
 								<div class="highlight-box">
+									<span class="highlight-box-icon"><i class="fas fa-terminal fa-fw"></i></span>
 									<h2 class="section-title">OwlHacks</h2>
 									<p>Temple University’s premier hack-a-thon, sponsored by Temple ACM and our partners.</p>
-									<a href="#" class="action-link action-link-black">Learn More ></a>
+									<a href="https://owlhacks.com/" class="action-link action-link-black">Learn More <span class="action-link-icon"><i class="fas fa-arrow-right"></i></span></a>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="highlight-box">
+									<span class="highlight-box-icon"><i class="fas fa-chalkboard fa-fw"></i></span>
 									<h2 class="section-title">Starz CC</h2>
 									<p>The STARZ Computing Corps works to provide computer science education to underserved schools.</p>
-									<a href="#" class="action-link action-link-black">Learn More ></a>
+									<a href="http://tu-stars.org/" class="action-link action-link-black">Learn More <span class="action-link-icon"><i class="fas fa-arrow-right"></i></span></a>
 								</div>
 							</div>
 						</div>

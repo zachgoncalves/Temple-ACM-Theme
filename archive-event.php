@@ -14,7 +14,7 @@ get_header(); ?>
 			while(have_posts()):
 				the_post();
 
-				if(strtotime(get_field('event_date'))<time()): 
+				if(strtotime(get_field('event_date'))>time()): 
 			?>
 
 			<a href="<?php echo(get_permalink())?>" class="event-archive-container pt-5">

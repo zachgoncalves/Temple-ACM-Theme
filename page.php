@@ -20,7 +20,7 @@
 		    <div class="container">  
 				<?php if(!empty(wpb_list_child_pages())): ?>
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-md-3 border-right">
 						<?php echo wpb_list_child_pages(); ?>
 					</div>
 					<div class="col-md-9">
