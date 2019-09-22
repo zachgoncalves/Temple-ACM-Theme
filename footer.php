@@ -10,7 +10,7 @@
 		<div class="container text-center">
 			<div class="row justify-content-center">
 				<div class="col-md-2">
-					<a href="/contact" class="btn btn-yellow btn-text-white btn-col">Join Us</a>
+					<a href="/about-us/membership" class="btn btn-yellow btn-text-white btn-col">Join Us</a>
 				</div>
 				<div class="col-md-1 d-none d-md-block">
 					<span class="col-divider"></span>
@@ -26,7 +26,7 @@
 			<address>
 				<img src="" class="logo" alt="">
 				<p>The Temple University Association for Computing Machinery</p>
-				<p>1925 N 12th St<br>Philadelphia, PA 19122</p>
+				<p>1925 N 12th St<br>Philadelphia, PA 19122 <br />Office 364</p>
 				<p><a href="mailto:tuacm@temple.edu" title="Email the Temple ACM">tuacm@temple.edu</a></p>
 			</address>
 			<div class="footer-social-container">
@@ -45,15 +45,15 @@
 				</div>
 				<div class="col-6 col-md-8">
 					<ul class="footer-links">
-						<li><a class="transition" href="#">About Us</a></li>
-						<li><a class="transition" href="#">Events</a></li>
-						<li><a class="transition" href="#">Contact Us</a></li>
-						<li><a class="transition" href="#">TU Website</a></li>
-						<li><a class="transition" href="#">College of Science & Technology</a></li>
-						<li><a class="transition" href="#">CST Advising</a></li>
-						<li><a class="transition" href="#">Career Center</a></li>
-						<li><a class="transition" href="#">CIS Website</a></li>
-						<li><a class="transition" href="#">OwlHacks</a></li>
+						<li><a class="transition" href="/about-us">About Us</a></li>
+						<li><a class="transition" href="/events">Events</a></li>
+						<li><a class="transition" href="/contact-us">Contact Us</a></li>
+						<li><a class="transition" href="https://temple.edu">TU Website</a></li>
+						<li><a class="transition" href="https://cst.temple.edu">College of Science & Technology</a></li>
+						<li><a class="transition" href="https://cst.temple.edu/students/undergraduate-academic-advising">CST Advising</a></li>
+						<li><a class="transition" href="https://www.temple.edu/provost/careercenter/">Career Center</a></li>
+						<li><a class="transition" href="https://cis.temple.edu">CIS Website</a></li>
+						<li><a class="transition" href="https://owlhacks.com/">OwlHacks</a></li>
 					</ul>
 				</div>
 			</div>
