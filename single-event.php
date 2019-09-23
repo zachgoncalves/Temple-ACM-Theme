@@ -25,7 +25,7 @@
 			</div>	
 			<?php the_content(); ?>
 			<div class="event-single-footer">
-				<a href="/events" class="btn btn-cherry">View More Events ></a>
+				<a href="/events" class="btn btn-cherry">View More Events <i class="fas fa-arrow-right"></i></a>
 			</div>
 		</div>	         
 		

@@ -371,6 +371,7 @@ p {
  .sidebar-nav {
     list-style: none;
     padding-left:0;
+    height:100%;
 }
  .sidebar-nav li:first-child a {
      color:#A41E35;
@@ -500,11 +501,17 @@ p {
     .btn-col {
         margin-bottom:0;
     }    
+    .sidebar-nav {
+        border-right:1px solid rgba(0,0,0,.1);
+    }
 }
 
 @media (min-width: 992px) { 
     .homepage-title h1 {
         font-size:3rem;
+    }
+    .page-content {
+        padding-left:3rem;
     }
 }
 

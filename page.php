@@ -20,11 +20,13 @@
 		    <div class="container">  
 				<?php if(!empty(wpb_list_child_pages())): ?>
 				<div class="row">
-					<div class="col-md-3 border-right">
+					<div class="col-md-3 order-1 order-md-0 mt-5 mt-md-0">
 						<?php echo wpb_list_child_pages(); ?>
 					</div>
 					<div class="col-md-9">
-						<?php the_content(); ?>
+						<div class="page-content">
+							<?php the_content(); ?>
+						</div>
 					</div>
 				</div>
 				<?php else: 
