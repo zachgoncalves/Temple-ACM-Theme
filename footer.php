@@ -40,10 +40,10 @@
 	<footer>
 		<div class="container">
 			<div class="row justify-content-between align-items-center">
-				<div class="col-6 col-md-3">
+				<div class="col-12 col-md-3">
 					<img src="<?php bloginfo('template_directory'); ?>/assets/img/acm_logo.png" class="footer-logo">
 				</div>
-				<div class="col-6 col-md-8">
+				<div class="col-12 col-md-8">
 					<ul class="footer-links">
 						<li><a class="transition" href="/about-us">About Us</a></li>
 						<li><a class="transition" href="/events">Events</a></li>
