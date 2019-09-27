@@ -126,8 +126,18 @@ p {
     border-top:2px solid #BAA682;
     font-weight: bold;
     text-align: center;
+    line-height: 1.2rem;
 }
-
+.header-events-list-all-link {
+    color:rgba(0,0,0,.7);
+    float: right;
+    vertical-align: middle;
+    font-size:.9rem;
+    text-decoration: none;
+}
+.header-events-list-all-link:hover {
+    color:#000;
+}
 .event {
     transition:150ms ease-in-out;
     height: 100%;

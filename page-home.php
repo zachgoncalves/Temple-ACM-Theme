@@ -76,17 +76,19 @@
 						<div class="row justify-content-between">
 							<div class="col-md-4">
 								<div class="header-events-container">
-									<span class="header-events-list-title">Events</span>
+									<span class="header-events-list-title">Events <a href="/events" class="header-events-list-all-link">View All</a></span>
 									<?php $args = array(
 										'post_type'      => 'Event', 
-										'posts_per_page' => 3,
 										'meta_key'       => 'event_date',
+										'posts_per_page' => '-1',
 										'orderby'        => 'meta_value',
 										'order'          => 'asc' 
 									); ?>
-									<?php $loop = new WP_Query($args); ?>
+									<?php $loop = new WP_Query($args);
+										$count = 0;
+									?>
 									<?php if ( $loop->have_posts() ) : while ( $loop->have_posts()) : $loop->the_post(); 
-										if(strtotime(get_field('event_date'))>time()): 
+										if(strtotime(get_field('event_date'))>time() && $count < 3): 
 									?>
 										<div class="mb-4">
 											<a href="<?php echo get_permalink(get_the_ID()) ?>" class="event d-flex justify-content-between align-items-center">
@@ -100,6 +102,7 @@
 											</a>
 										</div>
 										<?php 
+											$count++;
 											endif;
 											endwhile; ?>
 
