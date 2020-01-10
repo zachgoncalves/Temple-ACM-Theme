@@ -65,8 +65,7 @@ add_action('wp_enqueue_scripts', 'theme_styles');
 /******************** add RSS feed links to HTML <head> ********************/
 /********************************************************************************/
 
-automatic_feed_links();
-
+add_theme_support('automatic-feed-links');
 
 /*--------------------------------------------------------------*/
 // Admin Functions
@@ -134,6 +133,7 @@ function cpt_events() {
     'query_var'     => true,    
     'has_archive'   => true,
     'hierarchical'  => true,
+    'show_in_rest' => true,
     'taxonomies'    => array( 'category' ),
     'rewrite'           => array('slug' => 'events'),
     'menu_icon'     => 'dashicons-calendar-alt'
