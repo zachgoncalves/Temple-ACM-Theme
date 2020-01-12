@@ -6,9 +6,6 @@
 
 	get_header(); 
 ?>
-	<div class="page-titlebar mb-5">
-		<h1 class="page-title"><?php the_title() ?></h1>	
-	</div>
 	<?php
 
 	if(have_posts()):

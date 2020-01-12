@@ -16,6 +16,11 @@ function theme_styles(){
         'all'
     );
     wp_enqueue_style(
+        'google-fonts', 
+        'https://fonts.googleapis.com/css?family=Faustina|Roboto|Roboto+Condensed:400,700&display=swap', 
+        false
+    );
+    wp_enqueue_style(
         'style', 
         get_stylesheet_uri() 
     );
@@ -77,7 +82,7 @@ function register_menu() {
 add_action( 'init', 'register_menu' );
 
 function wpb_list_child_pages() { 
-
+    $string = '';
     global $post; 
 
     if ( is_page() && $post->post_parent )

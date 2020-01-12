@@ -75,7 +75,7 @@
 					<div class="container mission-highlight">
 						<div class="row justify-content-between">
 							<div class="col-md-4">
-								<div class="header-events-container">
+								<div class="header-events-container mb-5 mb-md-0">
 									<span class="header-events-list-title">Events <a href="/events" class="header-events-list-all-link">View All</a></span>
 									<?php $args = array(
 										'post_type'      => 'Event', 
@@ -83,33 +83,36 @@
 										'posts_per_page' => '-1',
 										'orderby'        => 'meta_value',
 										'order'          => 'asc' 
-									); ?>
-									<?php $loop = new WP_Query($args);
-										$count = 0;
-									?>
-									<?php if ( $loop->have_posts() ) : while ( $loop->have_posts()) : $loop->the_post(); 
-										if(strtotime(get_field('event_date'))>time() && $count < 3): 
-									?>
-										<div class="mb-4">
-											<a href="<?php echo get_permalink(get_the_ID()) ?>" class="event d-flex justify-content-between align-items-center">
-												<div class="event-preview-info">
-													<span class="event-title"><?php the_title() ?></span>
-													<span class="event-date"><?php the_field('event_date') ?> in <?php the_field('event_location') ?></span>
+									); 
+									$counter = 0;
+									$loop = new WP_Query($args);
+										if ( $loop->have_posts() ) : while ( $loop->have_posts()) : $loop->the_post(); 
+											$end_date_time = get_field('event_date') . ' - ' . get_field('event_end_time');
+											$obj_end_date_time = DateTime::createFromFormat('F j, Y - g:i a', $end_date_time);
+											$current_time = new DateTime('now', new DateTimeZone('America/New_York'));
+
+											if($obj_end_date_time > $current_time && $counter < 3): 
+												$counter++; 
+										?>
+												<div class="mb-4">
+													<a href="<?php echo get_permalink(get_the_ID()) ?>" class="event d-flex justify-content-between align-items-center">
+														<div class="event-preview-info">
+															<span class="event-title"><?php the_title() ?></span>
+															<span class="event-date"><?php the_field('event_date') ?> in <?php the_field('event_location') ?></span>
+														</div>
+														<div class='event-preview-arrow'>
+															<i class="fas fa-arrow-right"></i>
+														</div>
+													</a>
 												</div>
-												<div class='event-preview-arrow'>
-													<i class="fas fa-arrow-right"></i>
-												</div>
-											</a>
-										</div>
-										<?php 
-											$count++;
+											<?php 
 											endif;
 											endwhile; ?>
 
-										<?php else: ?>
-											<h1>No upcoming events!</h1>
-										<?php endif; ?>
-										<?php wp_reset_postdata(); ?>     
+									<?php else: ?>
+										<p>There are no scheduled ACM events. Check back soon to see what we're up to.</p>
+									<?php endif; ?>
+									<?php wp_reset_postdata(); ?>     
 								</div>  
 							</div>
 							<div class="col-md-7">
@@ -141,22 +144,22 @@
 								<a href="https://tu-acmw.onrender.com/" class="highlight-cta">
 									<h2 class="highlight-title">ACM-W</h2>
 									<p>ACM-W is our sister organization that focuses on encouraging and supporting professional development for women in computing.</p>
-									<span class="btn btn-black btn-highlight">Learn More <i class="fas fa-arrow-right"></i></span>
+									<span class="btn btn-black btn-highlight"><i class="fas fa-angle-right"></i></span>
 								</a>
 							</div>
 							<div class="col-md-4">
 								<div class="highlight-box">
 									<span class="highlight-box-icon"><i class="fas fa-terminal fa-fw"></i></span>
 									<h2 class="section-title">OwlHacks</h2>
-									<p>Temple University’s premier hack-a-thon, sponsored by Temple ACM and our partners.</p>
+									<p>Temple University’s premier hack-a-thon, sponsored by Temple ACM/ACM-W and our partners.</p>
 									<a href="https://owlhacks.com/" class="action-link action-link-black">Learn More <span class="action-link-icon"><i class="fas fa-arrow-right"></i></span></a>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="highlight-box">
 									<span class="highlight-box-icon"><i class="fas fa-chalkboard fa-fw"></i></span>
-									<h2 class="section-title">Starz CC</h2>
-									<p>The STARZ Computing Corps works to provide computer science education to underserved schools.</p>
+									<h2 class="section-title">STARS</h2>
+									<p>The STARS Computing Corps works to provide computer science education to underserved schools.</p>
 									<a href="http://tu-stars.org/" class="action-link action-link-black">Learn More <span class="action-link-icon"><i class="fas fa-arrow-right"></i></span></a>
 								</div>
 							</div>
